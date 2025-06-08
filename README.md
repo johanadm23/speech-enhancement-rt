@@ -1,29 +1,29 @@
 # Real-Time Speech Enhancement on Device
 
-This project demonstrates a real-time-capable speech enhancement model using deep learning, trained on noisy/clean paired data and optimized for deployment on edge devices (CoreML).
+This repository demonstrates a deep learning pipeline for real-time-capable speech enhancement, optimized for deployment on edge devices.
 
 ## Overview
 
 - Input: Noisy voice recordings (real-world or simulated)
 - Output: Enhanced speech with reduced background noise
 - Models: UNet, Conv-TasNet, Spectrogram Denoising CNN
-- Deployment: Optimized and exported to CoreML
+- Deployment: Exported to CoreML for on-device use
 
 ## Project Structure
 
-- `notebooks/`: EDA, classical methods, deep learning training
-- `models/`: Model architectures
-- `scripts/`: Training, evaluation, model export
-- `utils/`: Preprocessing, audio metrics
-- `demo/`: GUI demo and sample outputs
+- `notebooks/`: Exploratory analysis, baseline methods, and training notebooks
+- `models/`: Model definitions and architectures
+- `scripts/`: Training, evaluation, and export scripts
+- `utils/`: Preprocessing and evaluation utilities
+- `demo/`: Lightweight demo application with example outputs
 
 ## Datasets Used
 
 - VoiceBank-DEMAND
 - MUSAN
-- Optional: Your own noisy recordings
+- Optional: Custom noisy recordings
 
-## How to Run
+## Usage
 
 ```bash
 pip install -r requirements.txt
@@ -31,14 +31,12 @@ python scripts/train.py --config configs/unet.yaml
 python scripts/evaluate.py --model checkpoints/best_model.pt
 ```
 
-## Results
+## Example Results
 
-| Model       | PESQ ↑ | STOI ↑ | Runtime (ms) ↓ |
-|-------------|--------|--------|----------------|
-| UNet        | 3.01   | 0.92   | 12.3           |
-| Conv-TasNet | 3.12   | 0.94   | 28.7           |
-
-Hear results in `demo/samples`
+| Model       | PESQ | STOI | Runtime (ms) |
+|-------------|------|------|--------------|
+| UNet        | 3.01 | 0.92 | 12.3         |
+| Conv-TasNet | 3.12 | 0.94 | 28.7         |
 
 ## CoreML Export
 
@@ -50,8 +48,8 @@ python scripts/export_coreml.py --model checkpoints/best_model.pt
 
 - Python, PyTorch, torchaudio
 - coremltools, ONNX
-- Jupyter, Streamlit (for demo)
+- Jupyter, Streamlit (for demonstration)
 
 ## License
 
-MIT License
+This code is provided for personal, non-commercial use only. All rights reserved.
