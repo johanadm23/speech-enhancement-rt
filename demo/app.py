@@ -4,7 +4,7 @@ import soundfile as sf
 from models.unet import UNet
 import torch
 
-st.title("🎤 Real-Time Speech Enhancer")
+st.title("Real-Time Speech Enhancer")
 uploaded = st.file_uploader("Upload a noisy WAV file", type=["wav"])
 model = UNet()
 model.load_state_dict(torch.load("checkpoints/best_model.pt", map_location="cpu"))
