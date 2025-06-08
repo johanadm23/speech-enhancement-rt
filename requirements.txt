@@ -1,0 +1,12 @@
+torch>=2.0
+torchaudio
+librosa
+soundfile
+scikit-learn
+matplotlib
+numpy
+tqdm
+coremltools
+pesq
+speechmetrics
+streamlit
