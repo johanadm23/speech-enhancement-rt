@@ -1,0 +1,29 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Environment
+.env
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Data and audio artifacts
+*.wav
+*.mp3
+*.flac
+*.pt
+*.h5
+*.ckpt
+*.npz
+
+# Jupyter checkpoints
+.ipynb_checkpoints
+
+# OS
+.DS_Store
+Thumbs.db
