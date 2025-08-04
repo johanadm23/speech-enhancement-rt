@@ -23,10 +23,10 @@ This repository demonstrates a deep learning pipeline for real-time-capable spee
 
 ## Notebook 01 Features
 
-- **Persistent caching** of dataset chunks via `.pkl` files
-- **Custom PyTorch Dataset class** for clean/noisy speech
+- Persistent caching of dataset chunks via `.pkl` files
+- Custom PyTorch Dataset class for clean/noisy speech
 - Configurable audio segment durations & sample rates
-- **Log-Mel spectrogram** visualization
+- Log-Mel spectrogram visualization
 - Ready to integrate with neural network models (next steps)
   
 ## Usage
